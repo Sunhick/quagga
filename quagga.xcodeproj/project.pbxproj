@@ -6,8 +6,34 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A394C35820B28ECB005E065E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A394C35720B28ECB005E065E /* main.cpp */; };
+		A394C35E20B28EE1005E065E /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A394C35C20B28EE1005E065E /* Component.cpp */; };
+		A394C35F20B28EE1005E065E /* Component.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A394C35D20B28EE1005E065E /* Component.hpp */; };
+		A394C36320B28F81005E065E /* Container.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A394C36120B28F81005E065E /* Container.hpp */; };
+		A394C36620B297B1005E065E /* libquagga.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A394C34920B28E83005E065E /* libquagga.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A394C35320B28ECB005E065E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A394C34920B28E83005E065E /* libquagga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libquagga.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A394C35520B28ECB005E065E /* quaggaTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = quaggaTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		A394C35720B28ECB005E065E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A394C35C20B28EE1005E065E /* Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		A394C35D20B28EE1005E065E /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		A394C36020B28F81005E065E /* Container.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Container.cpp; sourceTree = "<group>"; };
+		A394C36120B28F81005E065E /* Container.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Container.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -18,13 +44,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A394C35220B28ECB005E065E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A394C36620B297B1005E065E /* libquagga.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A394C34020B28E83005E065E = {
 			isa = PBXGroup;
 			children = (
+				A394C35020B28E98005E065E /* quagga */,
+				A394C35620B28ECB005E065E /* quaggaTests */,
 				A394C34A20B28E83005E065E /* Products */,
+				A394C36420B29580005E065E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -32,8 +69,35 @@
 			isa = PBXGroup;
 			children = (
 				A394C34920B28E83005E065E /* libquagga.a */,
+				A394C35520B28ECB005E065E /* quaggaTests */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A394C35020B28E98005E065E /* quagga */ = {
+			isa = PBXGroup;
+			children = (
+				A394C35C20B28EE1005E065E /* Component.cpp */,
+				A394C35D20B28EE1005E065E /* Component.hpp */,
+				A394C36020B28F81005E065E /* Container.cpp */,
+				A394C36120B28F81005E065E /* Container.hpp */,
+			);
+			path = quagga;
+			sourceTree = "<group>";
+		};
+		A394C35620B28ECB005E065E /* quaggaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A394C35720B28ECB005E065E /* main.cpp */,
+			);
+			path = quaggaTests;
+			sourceTree = "<group>";
+		};
+		A394C36420B29580005E065E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -43,6 +107,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A394C36320B28F81005E065E /* Container.hpp in Headers */,
+				A394C35F20B28EE1005E065E /* Component.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +132,23 @@
 			productReference = A394C34920B28E83005E065E /* libquagga.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		A394C35420B28ECB005E065E /* quaggaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A394C35920B28ECB005E065E /* Build configuration list for PBXNativeTarget "quaggaTests" */;
+			buildPhases = (
+				A394C35120B28ECB005E065E /* Sources */,
+				A394C35220B28ECB005E065E /* Frameworks */,
+				A394C35320B28ECB005E065E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = quaggaTests;
+			productName = quaggaTests;
+			productReference = A394C35520B28ECB005E065E /* quaggaTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -76,6 +159,9 @@
 				ORGANIZATIONNAME = Sunil;
 				TargetAttributes = {
 					A394C34820B28E83005E065E = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					A394C35420B28ECB005E065E = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
 				};
@@ -93,6 +179,7 @@
 			projectRoot = "";
 			targets = (
 				A394C34820B28E83005E065E /* quagga */,
+				A394C35420B28ECB005E065E /* quaggaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -102,6 +189,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A394C35E20B28EE1005E065E /* Component.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A394C35120B28ECB005E065E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A394C35820B28ECB005E065E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +333,22 @@
 			};
 			name = Release;
 		};
+		A394C35A20B28ECB005E065E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A394C35B20B28ECB005E065E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -254,6 +366,15 @@
 			buildConfigurations = (
 				A394C34E20B28E83005E065E /* Debug */,
 				A394C34F20B28E83005E065E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A394C35920B28ECB005E065E /* Build configuration list for PBXNativeTarget "quaggaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A394C35A20B28ECB005E065E /* Debug */,
+				A394C35B20B28ECB005E065E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
